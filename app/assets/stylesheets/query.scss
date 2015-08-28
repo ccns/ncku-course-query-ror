@@ -1,0 +1,28 @@
+// Place all the styles related to the query controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.app-area{
+    position: fixed;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.row{
+    height: 100%;
+}
+
+.menu{
+    height: 100%;
+    .glyphicon{
+        font-size: 1.5em;
+    }
+}
+
+.timetable{
+    height: 100%;
+    table{
+        height: 100%;
+    }
+}
