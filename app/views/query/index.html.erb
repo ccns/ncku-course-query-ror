@@ -1,149 +1,185 @@
-<div class="container-fluid app-area">
-    <div class="row">
-        <div class="menu col-md-1">
-            <div class="btn-group-vertical pull-right" role="group" aria-label="...">
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-education" aria-hidden="true"></span></button>
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></button>
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
-            </div>
-        </div>
+<div class="app-area">
+	<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--1-col menu pull-right">
+			<button type="button" class="mdl-button mdl-button--icon mdl-js-button"><i class="material-icons md-dark">search</i></button>
+			<button type="button" class="mdl-button mdl-button--icon mdl-js-button"><i class="material-icons md-dark md-inactive">school</i></button>
+			<button type="button" class="mdl-button mdl-button--icon mdl-js-button"><i class="material-icons md-dark md-inactive">settings</i></button>
+			<button type="button" class="mdl-button mdl-button--icon mdl-js-button"><i class="material-icons md-dark md-inactive">info_outline</i></button>
+		</div>
 
 
-        <div class="query col-md-4">
+		<div class="mdl-cell mdl-cell--4-col query">
 
-            <div class="filters">
+			<div class="filter">
 
-                <form action="" class="form-horizontal">
+				<div class="mdl-grid dept-select">
 
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" id="courseName" class="form-control" placeholder="課程名稱">
-                        </div>
-                    </div>
+					<div class="mdl-card mdl-shadow--2dp mdl-cell--12-col">
+						<div class="mdl-card__title">
+							<h6 class="mdl-card__title-text">系所選擇</h6>
+						</div><!-- card title -->
 
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon"></div>
-                            <input type="text" id="courseName" class="form-control" placeholder="教師名稱">
-                        </div>
-                    </div>
+						<div class="mdl-card__actions mdl-card--border" id="dept-list">
+							<div id="dept-list-containter" class="mdl-grid">
+								<div class="mdl-cell--6-col" id="dept-list-college">
+									<ul>
+										<li>
+											<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="college-1">
+												<input type="checkbox" id="college-1" class="mdl-checkbox__input" />
+												<span class="mdl-checkbox__label">工學院</span>
+											</label>
+										</li>
+									</ul>
+								</div><!-- college -->
+								<div class="mdl-cell--6-col" id="dept-list-dept">
+									<ul>
+										<li>
+											<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="dept-1">
+												<input type="checkbox" id="dept-1" class="mdl-checkbox__input" />
+												<span class="mdl-checkbox__label">機械系</span>
+											</label>
+										</li>
+									</ul>
+								</div><!-- dept -->
+							</div><!-- dept-list -->
+						</div><!-- card actions -->
 
-                </form>
+						<div class="mdl-card__menu">
+							<button class="mdl-button mdl-button--icon mdl-js-button" id="toggle-dept">
+								<i class="material-icons">expand_less</i>
+							</button>
+						</div><!-- care menu -->
+					</div><!-- care -->
+				</div><!-- dept select -->
 
-            </div>
+				<div class="mdl-grid search">
+					<div class="mdl-card mdl-shadow--2dp mdl-cell--6-col">
+						<div class="mdl-card__actions">
+							<input class="text-field" type="text" id="courseName"  placeholder="課程名稱"/>
+						</div>
+					</div><!-- card -->
 
-            <div class="result">
+					<div class="mdl-card mdl-shadow--2dp mdl-cell--6-col">
+						<div class="mdl-card__actions">
+							<input class="text-field" type="text" id="teacherName"  placeholder="教師名稱"/>
+						</div>
+					</div><!-- card -->
+				</div><!-- search -->
 
-            </div>
+			</div>
 
-        </div>
+			<div class="result">
+
+			</div>
+
+		</div>
 
 
-        <div class="timetable col-md-7">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>MON</th>
-                        <th>TUE</th>
-                        <th>WED</th>
-                        <th>THU</th>
-                        <th>FRI</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>N</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>A</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+		<div class="mdl-cell mdl-cell--7-col timetable">
+			<div class="mdl-grid">
+				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+					<thead>
+						<tr>
+							<th class="period"></th>
+							<th>MON</th>
+							<th>TUE</th>
+							<th>WED</th>
+							<th>THU</th>
+							<th>FRI</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="period">1</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">2</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">3</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">4</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">N</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">5</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">6</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">7</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">8</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">9</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="period">A</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>
