@@ -20,7 +20,9 @@
 }
 
 .menu{
-	
+	width: 32px !important;
+	margin-left: 16px !important;
+	margin-right: 0px !important;
 }
 
 .query{
@@ -50,6 +52,9 @@
 						padding: 0px;
 						#dept-list-college{
 							border-right: 1px solid rgba(0, 0, 0, 0.1);
+						}
+						.mel-cell{
+							padding-left: 8px;
 						}
 					}
 				}
@@ -91,6 +96,7 @@
 				td{
 					border-right: 1px solid rgba(0, 0, 0, 0.12);
 					border-left: 1px solid rgba(0, 0, 0, 0.12);
+					cursor: pointer;
 				}
 			}
 		}
