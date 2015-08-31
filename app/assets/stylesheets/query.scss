@@ -85,6 +85,9 @@
 		}
 		tbody{
 			tr{
+				&:hover{
+					background-color: transparent;
+				}
 				td{
 					border-right: 1px solid rgba(0, 0, 0, 0.12);
 				}
