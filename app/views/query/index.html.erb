@@ -39,6 +39,18 @@
 												<span class="mdl-checkbox__label">機械系</span>
 											</label>
 										</li>
+										<li>
+											<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="dept-2">
+												<input type="checkbox" id="dept-2" class="mdl-checkbox__input" />
+												<span class="mdl-checkbox__label">化工系</span>
+											</label>
+										</li>
+										<li>
+											<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="dept-3">
+												<input type="checkbox" id="dept-3" class="mdl-checkbox__input" />
+												<span class="mdl-checkbox__label">航太系</span>
+											</label>
+										</li>
 									</ul>
 								</div><!-- dept -->
 							</div><!-- dept-list -->
@@ -53,18 +65,56 @@
 				</div><!-- dept select -->
 
 				<div class="mdl-grid search">
-					<div class="mdl-card mdl-shadow--2dp mdl-cell--6-col">
+					<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
 						<div class="mdl-card__actions">
 							<input class="text-field" type="text" id="courseName"  placeholder="課程名稱"/>
 						</div>
 					</div><!-- card -->
 
-					<div class="mdl-card mdl-shadow--2dp mdl-cell--6-col">
+					<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
 						<div class="mdl-card__actions">
 							<input class="text-field" type="text" id="teacherName"  placeholder="教師名稱"/>
 						</div>
 					</div><!-- card -->
 				</div><!-- search -->
+				
+				<div class="mdl-grid result">
+					<ul>
+						<li>
+							<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+								<div class="mdl-card__actions">
+									<div class="mdl-grid">
+										<div class="mdl-cell mdl-cell--10-col">
+											<div class="result-title">
+												<b>E1-999 機械設計</b>
+												<button class="mdl-button mdl-js-button mdl-js-ripple-effect more-info">more</button>
+											</div>
+											<div class="mdl-grid">
+												<div class="mdl-cell mdl-cell--6-col">
+													<ul>
+														<li><b>教師: </b>吳俊煌</li>
+														<li><b>時間: </b>[5]1~2</li>
+													</ul>
+												</div>
+												<div class="mdl-cell mdl-cell--6-col">
+													<ul>
+														<li><b>年級: </b>3</li>
+														<li><b>餘額: </b>0</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="mdl-cell mdl-cell--2-col">
+											<button class="mdl-button mdl-js-button mdl-js-ripple-effect add-to-table">
+												<i class="material-icons">add</i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div><!-- card -->
+						</li>
+					</ul>
+				</div><!-- result -->
 
 			</div>
 
@@ -80,7 +130,8 @@
 				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
 					<thead>
 						<tr>
-							<th class="period"></th>
+							<th class="reset">
+			<button type="button" class="mdl-button mdl-js-button" id="reset">RESET</button></th>
 							<th class="td-1h">MON</th>
 							<th class="td-2h">TUE</th>
 							<th class="td-3h">WED</th>
@@ -89,7 +140,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr class="tr-1">
 							<th class="period">1</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -97,7 +148,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-2">
 							<th class="period">2</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -105,7 +156,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-3">
 							<th class="period">3</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -113,7 +164,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-4">
 							<th class="period">4</td>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -121,7 +172,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-N">
 							<th class="period">N</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -129,7 +180,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-5">
 							<th class="period">5</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -137,7 +188,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-6">
 							<th class="period">6</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -145,7 +196,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-7">
 							<th class="period">7</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -153,7 +204,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-8">
 							<th class="period">8</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -161,7 +212,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-9">
 							<th class="period">9</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>
@@ -169,7 +220,7 @@
 							<td class="td-4"></td>
 							<td class="td-5"></td>
 						</tr>
-						<tr>
+						<tr class="tr-A">
 							<th class="period">A</th>
 							<td class="td-1"></td>
 							<td class="td-2"></td>

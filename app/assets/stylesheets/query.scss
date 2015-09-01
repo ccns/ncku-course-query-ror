@@ -46,6 +46,7 @@
 				.mdl-card__actions{
 					ul{
 						list-style-type: none;
+						padding-left: 10px;
 					}
 					#dept-list-containter{
 						height: 100%;
@@ -54,7 +55,7 @@
 							border-right: 1px solid rgba(0, 0, 0, 0.1);
 						}
 						.mel-cell{
-							padding-left: 8px;
+							width:  calc( 50% - 1px );
 						}
 					}
 				}
@@ -62,12 +63,32 @@
 		}
 		.search{
 			.mdl-card{
-				margin: 0px 8px;
 				min-height: 30px;
 				.text-field{
 					width: 100%;
 					border: 0px;
 					font-size: 1em;
+				}
+			}
+		}
+		.result{
+			ul{
+				list-style-type: none;
+				padding-left: 0px;
+				margin: 0px;
+				width: 100%;
+			}
+			.mdl-card{
+				min-height: 80px;
+				.mdl-grid{
+					padding: 0;
+					.result-title{
+						font-size: 1.2em;
+					}
+					.add-to-table{
+						height: 100%;
+						min-width: 100%;
+					}
 				}
 			}
 		}
@@ -84,7 +105,11 @@
 		thead{
 			tr{
 				th{
-					height: 40px;
+					height: 30px;
+					vertical-align: middle;
+				}
+				.reset{
+					padding: 0px 5px;
 				}
 			}
 		}
@@ -94,9 +119,14 @@
 					background-color: transparent;
 				}
 				td{
-					border-right: 1px solid rgba(0, 0, 0, 0.12);
-					border-left: 1px solid rgba(0, 0, 0, 0.12);
+					border-top: 1px solid rgba(0, 0, 0, 0.2);
+					border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+					border-right: 1px solid rgba(0, 0, 0, 0.2);
+					border-left: 1px solid rgba(0, 0, 0, 0.2);
 					cursor: pointer;
+					&.selected{
+						background-color: rgba(0, 0, 0, 0.25);
+					}
 				}
 			}
 		}
@@ -108,7 +138,6 @@
 }
 
 ul{
-	padding-left: 10px;
 }
 
 .mdl-grid{

@@ -2,15 +2,20 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
+	
 	$("#toggle-dept").click ->
 		$("#dept-list").slideToggle()
 		$(this).animateRotate(180)
+		
 	$(".timetable td").hover(
 		->
 			tdNow = $(this).attr 'class'
-			$("td."+tdNow).css "background-color", "rgba(0, 0, 0, 0.25)"
-			$(this).siblings().not(".period").css "background-color", "rgba(0, 0, 0, 0.25)"
-			$(this).css "background-color", "rgba(0, 0, 0, 0.5)"
+			tdNow = tdNow.split ' ', 1
+			# td hover
+			$("td."+tdNow).not(".selected").css "background-color", "rgba(0, 0, 0, 0.2)"
+			$(this).siblings().not(".period").not(".selected").css "background-color", "rgba(0, 0, 0, 0.2)"
+			$(this).css "background-color", "rgba(0, 0, 0, 0.3)"
+			# th hover
 			$(this).siblings().filter(".period").css {
 				backgroundColor: "#2a8658",
 				color: "white",
@@ -25,18 +30,28 @@ $(document).ready ->
 			}
 		->
 			tdNow = $(this).attr 'class'
-			$("td."+tdNow).css "background-color", "transparent"
-			$(this).siblings().not(".period").css "background-color", "transparent"
+			tdNow = tdNow.split ' ', 1
+			# td hover
+			$("td."+tdNow).css "background-color", ""
+			$(this).siblings().not(".period").css "background-color", ""
+			# th hover
 			$(this).siblings().filter(".period").css {
-				backgroundColor: "transparent",
+				backgroundColor: "",
 				color: "rgba(0, 0, 0, 0.54)",
-				right: "0px",
-				boxShadow: "none"
+				right: "",
+				boxShadow: ""
 			}
 			$("th."+tdNow+"h").css {
-				backgroundColor: "transparent",
+				backgroundColor: "",
 				color: "rgba(0, 0, 0, 0.54)",
-				bottom: "0px",
-				boxShadow: "none"
+				bottom: "",
+				boxShadow: ""
 			}
 	)
+
+	$(".timetable td").click -> 
+		$(this).toggleClass("selected")
+		
+	$("#reset").click ->
+		$(".timetable td").removeClass("selected")
+	
