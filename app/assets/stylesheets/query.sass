@@ -1,0 +1,94 @@
+// Place all the styles related to the query controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.app-area
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0px
+	bottom: 0px
+	left: 0px
+	right: 0px
+	padding: 0px
+	margin: 0px
+	overflow: hidden
+	.row
+		width: 100%
+		height: 100%
+		.col
+			height: 100%
+
+.menu
+	width: 32px !important
+	padding: 0px
+	a
+		padding: 0px
+
+.query
+	overflow-y: hidden
+	#filter
+		height: auto
+		width: 100%
+		.row
+			margin-bottom: 5px
+		#dept-select
+			.card
+				#toggle-dept
+					padding: 0px
+					i
+						font-size: 24px
+				.card-content
+					padding: 10px
+					#dept-list-containter
+						#dept-list-college
+							border-right: 1px solid rgba(0, 0, 0, 0.1)
+		#search
+			.card-content
+				padding: 10px
+	#result
+		overflow-y: scroll
+		ul
+			list-style-type: none
+			padding-left: 5px
+			padding-right: 15px
+			margin: 0px
+			width: 100%
+			.card-content
+				padding: 10px
+				.row
+					margin-bottom: 10px
+				.more-info
+					padding: 0px 8px
+					height: 24px
+					line-height: 24px
+				.add-to-table
+					position: absolute
+					right: 10px
+					padding: 0px 10px
+					vertical-align: middle
+
+
+.timetable
+	overflow-y: scroll
+	table
+		height: 95%
+		width: 100%
+		.period
+			width: 1em
+		thead
+			.reset
+				border-right: 1px solid #d0d0d0
+				a
+					padding: 0px 10px
+			th
+				padding: 5px
+		tbody
+			tr
+				th
+					text-align: right
+				td
+					border: 1px solid rgba(0, 0, 0, 0.2)
+					cursor: pointer
+					&.selected
+						background-color: rgba(0, 0, 0, 0.25)

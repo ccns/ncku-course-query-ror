@@ -2,11 +2,24 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
-	
+	$("#app-area").css {
+		height: $( document ).height(),
+		width: $( document ).width()
+	}
+
+	$("#result").height $( document ).height() - $( "#filter" ).height() - 20
+
+	$( window ).resize ->
+		$("#app-area").css {
+			height: $( document ).height(),
+			width: $( document ).width()
+		}
+
 	$("#toggle-dept").click ->
-		$("#dept-list").slideToggle()
+		$("#dept-list-containter").slideToggle ->
+			$("#result").height $( document ).height() - $( "#filter" ).height() - 20
 		$(this).animateRotate(180)
-		
+
 	$(".timetable td").hover(
 		->
 			tdNow = $(this).attr 'class'
@@ -37,21 +50,20 @@ $(document).ready ->
 			# th hover
 			$(this).siblings().filter(".period").css {
 				backgroundColor: "",
-				color: "rgba(0, 0, 0, 0.54)",
+				color: "black",
 				right: "",
 				boxShadow: ""
 			}
 			$("th."+tdNow+"h").css {
 				backgroundColor: "",
-				color: "rgba(0, 0, 0, 0.54)",
+				color: "black",
 				bottom: "",
 				boxShadow: ""
 			}
 	)
 
-	$(".timetable td").click -> 
+	$(".timetable td").click ->
 		$(this).toggleClass("selected")
-		
+
 	$("#reset").click ->
 		$(".timetable td").removeClass("selected")
-	

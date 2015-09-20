@@ -15,7 +15,7 @@
 //= require jquery-ui
 //= require turbolinks
 //= require_tree .
-//= require material
+//= require materialize-sprockets
 $.fn.animateRotate = function(duration, easing, complete) {
   return this.each(function() {
     var $elem = $(this);

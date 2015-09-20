@@ -1,137 +1,120 @@
 <div class="app-area">
-	<div class="mdl-grid">
-		<div class="mdl-cell menu pull-right">
-			<button type="button" class="mdl-button mdl-button--icon mdl-js-button"><i class="material-icons md-dark">search</i></button>
-			<button type="button" class="mdl-button mdl-button--icon mdl-js-button"><i class="material-icons md-dark md-inactive">school</i></button>
-			<button type="button" class="mdl-button mdl-button--icon mdl-js-button"><i class="material-icons md-dark md-inactive">settings</i></button>
-			<button type="button" class="mdl-button mdl-button--icon mdl-js-button"><i class="material-icons md-dark md-inactive">info_outline</i></button>
+	<div class="row">
+		<div class="col menu pull-right">
+			<a class="btn-flat"><i class="material-icons">search</i></a>
+			<a class="btn-flat"><i class="material-icons">school</i></a>
+			<a class="btn-flat"><i class="material-icons">settings</i></a>
+			<a class="btn-flat"><i class="material-icons">info_outline</i></a>
 		</div>
 
 
-		<div class="mdl-cell mdl-cell--4-col query">
+		<div class="col s4 query">
 
-			<div class="filter">
+			<div id="filter">
 
-				<div class="mdl-grid dept-select">
+				<div class="row" id="dept-select">
 
-					<div class="mdl-card mdl-shadow--2dp mdl-cell--12-col">
-						<div class="mdl-card__title">
-							<h6 class="mdl-card__title-text">系所選擇</h6>
-						</div><!-- card title -->
+					<div class="card col s12">
 
-						<div class="mdl-card__actions mdl-card--border" id="dept-list">
-							<div id="dept-list-containter" class="mdl-grid">
-								<div class="mel-cell mdl-cell--6-col" id="dept-list-college">
+						<div class="card-content" id="dept-list">
+							<a class="btn-flat" id="toggle-dept"><i class="material-icons">expand_less</i></a>
+							<span class="black-text">系所選擇</span>
+
+							<div id="dept-list-containter">
+
+								<div class="col s6" id="dept-list-college">
 									<ul>
 										<li>
-											<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="college-1">
-												<input type="checkbox" id="college-1" class="mdl-checkbox__input" />
-												<span class="mdl-checkbox__label">工學院</span>
-											</label>
+											<input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+      								<label for="filled-in-box">工學院</label>
 										</li>
 									</ul>
 								</div><!-- college -->
-								<div class="mel-cell mdl-cell--6-col" id="dept-list-dept">
+
+								<div class="col s6" id="dept-list-dept">
 									<ul>
 										<li>
-											<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="dept-1">
-												<input type="checkbox" id="dept-1" class="mdl-checkbox__input" />
-												<span class="mdl-checkbox__label">機械系</span>
-											</label>
-										</li>
-										<li>
-											<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="dept-2">
-												<input type="checkbox" id="dept-2" class="mdl-checkbox__input" />
-												<span class="mdl-checkbox__label">化工系</span>
-											</label>
-										</li>
-										<li>
-											<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="dept-3">
-												<input type="checkbox" id="dept-3" class="mdl-checkbox__input" />
-												<span class="mdl-checkbox__label">航太系</span>
-											</label>
+											<input type="checkbox" class="filled-in" id="filled-in-box2" checked="checked" />
+      								<label for="filled-in-box2">機械系</label>
 										</li>
 									</ul>
 								</div><!-- dept -->
-							</div><!-- dept-list -->
-						</div><!-- card actions -->
 
-						<div class="mdl-card__menu">
-							<button class="mdl-button mdl-button--icon mdl-js-button" id="toggle-dept">
-								<i class="material-icons">expand_less</i>
-							</button>
-						</div><!-- care menu -->
+							</div><!-- dept-list -->
+						</div><!-- card-content -->
+
+
+
 					</div><!-- care -->
 				</div><!-- dept select -->
 
-				<div class="mdl-grid search">
-					<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
-						<div class="mdl-card__actions">
-							<input class="text-field" type="text" id="courseName"  placeholder="課程名稱"/>
-						</div>
-					</div><!-- card -->
-
-					<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
-						<div class="mdl-card__actions">
-							<input class="text-field" type="text" id="teacherName"  placeholder="教師名稱"/>
+				<div class="row" id="search">
+					<div class="card col s12">
+						<div class="card-content">
+							<div class="input-field col s6">
+			          <input id="course_name" type="text" class="validate">
+			          <label for="course_name">課程名稱</label>
+			        </div>
+			        <div class="input-field col s6">
+			          <input id="teacher_name" type="text" class="validate">
+			          <label for="teacher_name">教師名稱</label>
+			        </div>
 						</div>
 					</div><!-- card -->
 				</div><!-- search -->
-				
-				<div class="mdl-grid result">
-					<ul>
-						<li>
-							<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-								<div class="mdl-card__actions">
-									<div class="mdl-grid">
-										<div class="mdl-cell mdl-cell--10-col">
-											<div class="result-title">
-												<b>E1-999 機械設計</b>
-												<button class="mdl-button mdl-js-button mdl-js-ripple-effect more-info">more</button>
-											</div>
-											<div class="mdl-grid">
-												<div class="mdl-cell mdl-cell--6-col">
-													<ul>
-														<li><b>教師: </b>吳俊煌</li>
-														<li><b>時間: </b>[5]1~2</li>
-													</ul>
-												</div>
-												<div class="mdl-cell mdl-cell--6-col">
-													<ul>
-														<li><b>年級: </b>3</li>
-														<li><b>餘額: </b>0</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="mdl-cell mdl-cell--2-col">
-											<button class="mdl-button mdl-js-button mdl-js-ripple-effect add-to-table">
-												<i class="material-icons">add</i>
-											</button>
-										</div>
+
+			</div>
+
+			<div id="result">
+				<ul>
+					<li>
+						<div class="card col s12">
+							<div class="card-content">
+
+								<div class="row">
+									<div class="result-title">
+										<b>E1-999 機械設計</b>
+										<a class="btn waves-effect more-info">
+											MORE
+										</a>
+										<a class="btn-flat waves-effect add-to-table">
+											<i class="material-icons">add</i>
+										</a>
 									</div>
 								</div>
-							</div><!-- card -->
-						</li>
-					</ul>
-				</div><!-- result -->
 
-			</div>
+								<div class="row">
+									<div class="col s6">
+										<ul>
+											<li><b>教師: </b>吳俊煌</li>
+											<li><b>時間: </b>[5]1~2</li>
+										</ul>
+									</div>
+									<div class="col s6">
+										<ul>
+											<li><b>年級: </b>3</li>
+											<li><b>餘額: </b>0</li>
+										</ul>
+									</div>
+								</div>
 
-			<div class="result">
-
-			</div>
+							</div>
+						</div><!-- card -->
+					</li>
+				</ul>
+			</div><!-- result -->
 
 		</div>
 
 
-		<div class="mdl-cell mdl-cell--7-col timetable">
-			<div class="mdl-grid">
-				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+		<div class="col s7 timetable">
+			<div class="card">
+				<table>
 					<thead>
 						<tr>
 							<th class="reset">
-			<button type="button" class="mdl-button mdl-js-button" id="reset">RESET</button></th>
+								<a class="btn-flat waves-effect" id="reset">RESET</a>
+							</th>
 							<th class="td-1h">MON</th>
 							<th class="td-2h">TUE</th>
 							<th class="td-3h">WED</th>
@@ -232,5 +215,6 @@
 				</table>
 			</div>
 		</div>
+
 	</div>
 </div>
