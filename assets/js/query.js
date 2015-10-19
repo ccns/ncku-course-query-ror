@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('.modal-trigger').leanModal();
   $("#app-area").css({
     height: $(document).height(),
     width: $(document).width()

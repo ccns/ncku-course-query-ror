@@ -1,6 +1,8 @@
-# out: ../main.js
-
 $(document).ready ->
+
+	# materialize initializeing
+	$('.modal-trigger').leanModal()
+
 	$("#app-area").css {
 		height: $( document ).height(),
 		width: $( document ).width()
